@@ -128,6 +128,10 @@ function sectScroll(event) {
     event.preventDefault();
     // Get the href link and find the element with that Id
     const link = event.target.getAttribute('href');
+    //  If the user did not click on the link element then do nothing.    
+    if (link === null) {
+        return 
+    }
     const toSect = document.querySelector(link);
     // offsetTop returns the top position of the element relative to it's parents
     // This property is useful because all of the sections have the same parent
